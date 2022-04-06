@@ -5,11 +5,11 @@ const express = require('express');
 const app = express();
 const drinks = require('./models/drinks.js')
 
-app.get('/drinks', (req, res) => {
+app.get('/', (req, res) => {
     res.send('Welcome to the Gitpub App!')
 });
 
-app.get('/drinks/all', (req, res) => {
+app.get('/drinks', (req, res) => {
     res.send(drinks)
 })
 
