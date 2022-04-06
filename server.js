@@ -5,7 +5,7 @@ const express = require('express');
 const app = express();
 
 app.get('/drinks', (req, res) => {
-    res.send(drinks)
+    res.send('Welcome to the Gitpub App!')
 });
 
 app.get('/drinks/:id', (req, res) => {
