@@ -8,7 +8,13 @@
 </head>
 <body>
     <h1>Welcome to the gitPub drink menu!</h1>
-
+    <ul>
+        Drink List
+        <% for( let drink in allDrinks) { %>
+            <% let drinkName = allDrinks[drink].name %>
+            <li><%= drinkName %></li>
+        <% } %>
+    </ul>
     <style>
         body {
             color: blanchedalmond;

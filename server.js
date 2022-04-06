@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/drinks', (req, res) => {
-    res.render('drinks_index.ejs')
+    res.render('drinks_index.ejs', { allDrinks: drinks })
 })
 
 app.get('/drinks/:id', (req, res) => {
