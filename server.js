@@ -3,10 +3,15 @@ const PORT = process.env.PORT;
 
 const express = require('express');
 const app = express();
+const drinks = require('./models/drinks.js')
 
 app.get('/drinks', (req, res) => {
     res.send('Welcome to the Gitpub App!')
 });
+
+app.get('/drinks/all', (req, res) => {
+    res.send(drinks)
+})
 
 app.get('/drinks/:id', (req, res) => {
     res.send(drinks[req.params.id])
