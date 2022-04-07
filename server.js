@@ -14,7 +14,8 @@ app.get('/drinks', (req, res) => {
 })
 
 app.get('/drinks/:id', (req, res) => {
-    res.send(drinks[req.params.id])
+    drinks[req.params.id].image = drinks[req.params.id].image.replace(/.jpg/, '.png')
+    res.render('drinks_show.ejs', { drink: drinks[req.params.id]})
 });
 
 app.listen(PORT, () => {
