@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gitPub Food Menu</title>
+</head>
+<body>
+    <h1>Welcome to the gitPub food menu!</h1>
+    <ul>
+        Food List
+        <% for( let food in allFood) { %>
+            <% let foodName = 
+                allFood[food].name.toLowerCase()
+                .split(' ')
+                .map((string) => string.charAt(0).toUpperCase() + string.substring(1))
+                .join(' ') %>
+            <li>
+                <a href='food/<%= food %>'><%= foodName %></a>
+            </li>
+        <% } %>
+    </ul>
+    <style>
+        body {
+            color: blanchedalmond;
+            background-color: steelblue;
+        }
+    </style>
+</body>
+</html>
