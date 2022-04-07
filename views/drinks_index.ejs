@@ -16,7 +16,9 @@
                 .split(' ')
                 .map((string) => string.charAt(0).toUpperCase() + string.substring(1))
                 .join(' ') %>
-            <li><%= drinkName %></li>
+            <li>
+                <a href='drinks/<%= drink %>'><%= drinkName %></a>
+            </li>
         <% } %>
     </ul>
     <style>
