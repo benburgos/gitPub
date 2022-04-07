@@ -14,13 +14,13 @@ app.get('/drinks', (req, res) => {
     res.render('drinks_index.ejs', { allDrinks: drinks })
 })
 
+app.get('/food', (req, res) => {
+    res.render('food_index.ejs', { allFoods: food })
+})
+
 app.get('/drinks/:id', (req, res) => {
     drinks[req.params.id].image = drinks[req.params.id].image.replace(/.jpg/, '.png')
     res.render('drinks_show.ejs', { drink: drinks[req.params.id]})
-});
-
-app.get('/food', (req, res) => {
-    res.render('food_index.ejs', { allFood: food })
 });
 
 app.get('/food/:id', (req, res) => {

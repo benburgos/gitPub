@@ -10,9 +10,9 @@
     <h1>Welcome to the gitPub food menu!</h1>
     <ul>
         Food List
-        <% for( let food in allFood) { %>
+        <% for( let food in allFoods) { %>
             <% let foodName = 
-                allFood[food].name.toLowerCase()
+                allFoods[food].name.toLowerCase()
                 .split(' ')
                 .map((string) => string.charAt(0).toUpperCase() + string.substring(1))
                 .join(' ') %>
