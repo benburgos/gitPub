@@ -11,7 +11,11 @@
     <ul>
         Drink List
         <% for( let drink in allDrinks) { %>
-            <% let drinkName = allDrinks[drink].name %>
+            <% let drinkName = 
+                allDrinks[drink].name.toLowerCase()
+                .split(' ')
+                .map((string) => string.charAt(0).toUpperCase() + string.substring(1))
+                .join(' ') %>
             <li><%= drinkName %></li>
         <% } %>
     </ul>
